@@ -2,15 +2,15 @@
 // @name        Artlist DL
 // @namespace   http://tampermonkey.net/
 // @description Allows you to download artlist.io Music & SFX
-// @author      Mia @ github.com/xNasuni
+// @author      Mia @ github.com/sulmanfarooqq
 // @match       *://*.artlist.io/*
 // @grant       none
 // @require     https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js
 // @version     2.7
 // @run-at	    document-start
-// @updateURL   https://github.com/xNasuni/artlist-downloader/raw/main/artlist-downloader.user.js
-// @downloadURL https://github.com/xNasuni/artlist-downloader/raw/main/artlist-downloader.user.js
-// @supportURL  https://github.com/xNasuni/artlist-downloader/issues
+// @updateURL   https://github.com/sulmanfarooqq/OrangeMonkey/raw/main/artlist-downloader.user.js
+// @downloadURL https://github.com/sulmanfarooqq/OrangeMonkey/raw/main/artlist-downloader.user.js
+// @supportURL  https://github.com/sulmanfarooqq/OrangeMoneky/issues
 // ==/UserScript==
 
 const LoadedMusicLists = []
