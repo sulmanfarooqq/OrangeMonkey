@@ -82,4 +82,4 @@ BSD 3-Clause License - See [LICENSE](LICENSE) file for details.
 
 ---
 
-> ⭐ **Please star the repository if you find this useful!** ⭐
+> ⭐ **Also checkout the master brach, master brach contain a python cli based agent for downloading free music from the epidemic the most popular and favouite website for downloading free and fast music , also have a python code to download the Artlist Music using artlist.py cli based agent** ⭐
