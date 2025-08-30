@@ -157,14 +157,14 @@ def main():
     create_audio_directory()
     
     # Get user input for URL or file path
-    print("Enter 'u' to input a single EpidemicSound track URL")
-    print("Enter 'f' to input a file path containing multiple URLs")
-    choice = input("Your choice (u/f): ").strip().lower()
+    print("Enter '1' to input a single EpidemicSound track URL")
+    print("Enter '2' to input a file path containing multiple URLs")
+    choice = input("Your choice (1/2): ").strip().lower()
     
-    if choice == 'u':
+    if choice == '1':
         url = input("Enter the EpidemicSound track URL: ").strip()
         process_single_url(url)
-    elif choice == 'f':
+    elif choice == '2':
         filepath = input("Enter the path to the text file with URLs: ").strip()
         process_urls_from_file(filepath)
     else:
