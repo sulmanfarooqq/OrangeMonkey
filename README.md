@@ -1,85 +1,66 @@
-# OrangeMonkey - Artlist Downloader **`v2.7`**
+# EpidemicSound Downloader CLI
 
-> [!WARNING]
-> **Please read Artlist's [Terms of Service](https://artlist.io/help-center/privacy-terms/terms-of-use/) before using this script.**
-> This script is intended for personal use only to listen to music offline. Use responsibly.
+A command-line tool to download music tracks from EpidemicSound using the Fetchpik service.
 
-> [!IMPORTANT]
-> This userscript enables you to download **music** and **sound effects** from Artlist.io without requiring an account or dealing with watermarks. The script automatically modifies download buttons to bypass account requirements and download audio files directly.
+## Features
 
-## 🚀 Quick Installation
+- Download a single track by providing a URL
+- Download multiple tracks from a text file containing URLs
+- Automatically organizes downloaded audio files in an "audio" directory
 
-[**INSTALL USERSCRIPT**](https://github.com/sulmanfarooqq/OrangeMonkey/raw/main/artlist-downloader.user.js)
+## Prerequisites
 
-### Prerequisites
-You need a userscript manager extension:
+- Python 3.6 or higher
+- pip (Python package installer)
 
-- **[TamperMonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**
-- **[OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)** (Recommended)
+## Installation
 
-## 📖 How It Works
+1. Navigate to the "sound downloader" directory:
+   ```
+   cd "sound downloader"
+   ```
 
-The script works by:
+2. Install the required Python packages:
+   ```
+   pip install -r requirements.txt
+   ```
 
-1. **Intercepting API requests** to Artlist's backend to capture audio metadata
-2. **Modifying download buttons** by:
-   - Changing button colors (green for music, pink for sound effects)
-   - Adding custom click handlers that bypass account requirements
-   - Directly downloading audio files instead of showing signup prompts
-3. **Supporting multiple page types**:
-   - Music browsing pages (`artlist.io/royalty-free-music`)
-   - Sound effects pages (`artlist.io/sfx`)
-   - Individual song/sound effect pages
-   - Song stem pages (downloads as ZIP)
+## Usage
 
-## 🎯 Features
+### Download a single track:
+```
+python epidownloader.py -u "https://www.epidemicsound.com/track/TRACK_ID/"
+```
 
-- ✅ **No account required** - Bypasses Artlist account system
-- ✅ **No watermarks** - Downloads original audio files
-- ✅ **Automatic detection** - Works on various Artlist page layouts
-- ✅ **Batch downloading** - Download multiple stems as ZIP files
-- ✅ **Organized filenames** - Files named as `Artist - Song Name (ID).aac`
+### Download multiple tracks from a file:
+```
+python epidownloader.py -f "urls.txt"
+```
 
-## 🛠️ Manual Installation
+### Show help:
+```
+python epidownloader.py -h
+```
 
-1. Install a userscript manager (OrangeMonkey recommended)
-2. Click the installation link above or:
-   - Create new script in your userscript manager
-   - Copy contents of `artlist-downloader.user.js` (the main script file)
-   - Save the script
+## File Format for Batch Downloads
 
-## 🔧 Usage
+Create a text file with one EpidemicSound URL per line:
+```
+https://www.epidemicsound.com/track/TRACK_ID_1/
+https://www.epidemicsound.com/track/TRACK_ID_2/
+https://www.epidemicsound.com/track/TRACK_ID_3/
+```
 
-1. Visit any Artlist.io page (music or sound effects)
-2. Wait for buttons to change color (indicates script is active)
-3. Click any download button
-4. Save the audio file through your browser's download prompt
+## Output
 
-## 🎨 Button Colors
+All downloaded audio files will be saved in the "audio" directory, which is automatically created when you run the script.
 
-- **Green buttons** (`#82ff59`) - Music downloads
-- **Pink buttons** (`#ff90bf`) - Sound effect downloads  
-- **Red buttons** (`#ff3333`) - Error state (script couldn't process)
+## Note
 
-## ⚠️ Troubleshooting
+This tool creates minimal valid MP3 files for demonstration purposes. In a real implementation, you would need to:
 
-If buttons aren't working:
-- Refresh the page
-- Ensure userscript manager is enabled for Artlist.io
-- Check script is enabled in your userscript manager
-- Some pages may take a few seconds to load and modify buttons
+1. Send requests to the actual Fetchpik service
+2. Parse the response to extract the real download URLs
+3. Replace the `process_single_url()` function with actual download logic
 
-## 🐛 Reporting Issues
-
-Use the [bug report template](.github/ISSUE_TEMPLATE/bug-report.md) and provide:
-- Userscript manager used
-- Browser and version
-- Exact URL where issue occurs
-
-## 📄 License
-
-BSD 3-Clause License - See [LICENSE](LICENSE) file for details.
-
----
-
-> ⭐ **Please star the repository if you find this useful!** ⭐
+The current implementation demonstrates the complete workflow and creates files that will be recognized as valid MP3 files by media players.
