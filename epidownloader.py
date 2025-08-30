@@ -156,23 +156,19 @@ def main():
     # Main function
     create_audio_directory()
     
-    if len(sys.argv) < 2:
-        show_help()
-        return
+    # Get user input for URL or file path
+    print("Enter 'u' to input a single EpidemicSound track URL")
+    print("Enter 'f' to input a file path containing multiple URLs")
+    choice = input("Your choice (u/f): ").strip().lower()
     
-    option = sys.argv[1]
-    
-    if option in ['-h', '--help']:
-        show_help()
-        return
-    elif option in ['-u', '--url'] and len(sys.argv) > 2:
-        url = sys.argv[2]
+    if choice == 'u':
+        url = input("Enter the EpidemicSound track URL: ").strip()
         process_single_url(url)
-    elif option in ['-f', '--file'] and len(sys.argv) > 2:
-        filepath = sys.argv[2]
+    elif choice == 'f':
+        filepath = input("Enter the path to the text file with URLs: ").strip()
         process_urls_from_file(filepath)
     else:
-        print("Invalid arguments. Use -h for help.")
+        print("Invalid choice. Please enter 'u' or 'f'.")
         show_help()
 
 if __name__ == "__main__":

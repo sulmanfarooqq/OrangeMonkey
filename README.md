@@ -29,12 +29,14 @@ A command-line tool to download music tracks from EpidemicSound using the Fetchp
 
 ### Download a single track:
 ```
-python epidownloader.py -u "https://www.epidemicsound.com/track/TRACK_ID/"
+python epidownloader.py 
+select u 
 ```
 
 ### Download multiple tracks from a file:
 ```
-python epidownloader.py -f "urls.txt"
+python epidownloader.py  
+ select f 
 ```
 
 ### Show help:
