@@ -82,7 +82,8 @@ BSD 3-Clause License - See [LICENSE](LICENSE) file for details.
 
 ---
 
-> ⭐ **Also checkout the master brach, master brach contain a python cli based agent for downloading free music from the epidemic the most popular and favouite website for downloading free and fast music , also have a python code to download the Artlist Music using artlist.py cli based agent** ⭐
+> ⭐ **Also checkout the master brach, master brach contain a python cli based agent for downloading free music from the epidemic the most popular and favouite website for downloading free and fast music, also have a code to download all your favorite songs just in a 1 click** ⭐
+
 
 > **GO to master branch [Click me to checkout](https://github.com/sulmanfarooqq/OrangeMonkey/tree/master) Read the readme file for full guide.**
 
