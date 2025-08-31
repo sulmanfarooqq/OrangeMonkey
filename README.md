@@ -87,3 +87,5 @@ BSD 3-Clause License - See [LICENSE](LICENSE) file for details.
 
 > **GO to master branch [Click me to checkout](https://github.com/sulmanfarooqq/OrangeMonkey/tree/master) Read the readme file for full guide.**
 
+> **Credit of this userscript goes to [xNasuni](https://github.com/xNasuni/artlist-downloader)**
+
