@@ -89,3 +89,4 @@ BSD 3-Clause License - See [LICENSE](LICENSE) file for details.
 
 > **Credit of this userscript goes to [xNasuni](https://github.com/xNasuni/artlist-downloader)**
 
+use this repo for educational purpose , copyright issue on video is possible 
